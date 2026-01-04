@@ -147,4 +147,26 @@ let commentById = comments.find(comment => comment.id === 823423);
 
 let idx = comments.findIndex(comment => comment.id === 123523);
 
-console.log('Exercise 9 my result: ', idx);
+//console.log('Exercise 9 my result: ', idx);
+
+//Level up exercise 1 
+let totalYearsLived = inventors.reduce((total, inventor) => {
+  let lifespan = inventor.passed - inventor.year;
+  return total + lifespan;
+}, 0);
+
+//console.log('Level Up 1 my result: ', totalYearsLived);
+
+//Level up exercise 2
+
+let travelMethodCounts = travelMethods.reduce((obj, method) => {
+  if (!obj[method]) {
+    obj[method] = 0;
+  }
+    obj[method]++;
+    return obj;
+}, {});
+
+
+console.log('Level Up 2 my result: ', travelMethodCounts);
+
